@@ -1,0 +1,23 @@
+[Unit]
+Description=Xunfu AI resource network
+After=network.target mysqld.service
+
+[Service]
+Type=simple
+User=xunfu-app
+Group=xunfu-app
+WorkingDirectory=/www/wwwroot/xunfu
+Environment=NODE_ENV=production
+Environment=PATH=/opt/laosiji-runtime/node-v22.16.0-linux-x64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Environment=NODE_OPTIONS=--max-old-space-size=384
+ExecStart=/opt/laosiji-runtime/node-v22.16.0-linux-x64/bin/node node_modules/next/dist/bin/next start -H 0.0.0.0 -p 3050
+Restart=always
+RestartSec=4
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+UMask=0027
+
+[Install]
+WantedBy=multi-user.target

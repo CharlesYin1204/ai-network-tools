@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-14T08:45:50.700Z",
+  "results": [
+    {
+      "name": "用户表单发布资源并持久化",
+      "passed": true
+    },
+    {
+      "name": "用户编辑资源表单",
+      "passed": true
+    },
+    {
+      "name": "机域发布动态表单",
+      "passed": true
+    },
+    {
+      "name": "机域评论提交及回读",
+      "passed": true
+    },
+    {
+      "name": "真实AI名片草稿与明确采纳，不自动保存",
+      "passed": true
+    },
+    {
+      "name": "后台资源审核通过",
+      "passed": true
+    },
+    {
+      "name": "后台拒绝原因提交",
+      "passed": true
+    },
+    {
+      "name": "审核反馈可见与下架重新送审闭环",
+      "passed": true
+    },
+    {
+      "name": "新增功能无浏览器运行错误",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

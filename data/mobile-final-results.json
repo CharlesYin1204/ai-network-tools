@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-14T08:48:32.503Z",
+  "results": [
+    {
+      "name": "320px菜单与完整首屏排版",
+      "passed": true
+    },
+    {
+      "name": "390px菜单与完整首屏排版",
+      "passed": true
+    },
+    {
+      "name": "移动端管理员导航及APK界面无溢出",
+      "passed": true
+    },
+    {
+      "name": "最终桌面与手机视觉截图",
+      "passed": true
+    }
+  ]
+}

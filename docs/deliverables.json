@@ -1,0 +1,58 @@
+{
+  "requirements_document": {
+    "url": "https://rjppwe2dlq09.jp.larksuite.com/docx/HToadNRZpoJMN0xvZn0jT3h0pwg",
+    "token": "HToadNRZpoJMN0xvZn0jT3h0pwg",
+    "revision_verified": 47,
+    "local": "docs/product-requirements.xml",
+    "version": "v1.2"
+  },
+  "feature_workbook": {
+    "url": "https://rjppwe2dlq09.jp.larksuite.com/sheets/RGixszqVzhxDWVt55RyjMWpupDb",
+    "token": "RGixszqVzhxDWVt55RyjMWpupDb",
+    "feature_count": 67,
+    "local": "docs/product-features.csv",
+    "feature_tabs": [
+      "前端",
+      "用户中心",
+      "管理员后台",
+      "移动与APK",
+      "后续规划"
+    ],
+    "readback_verified": true,
+    "implemented_count": 60,
+    "planned_count": 7,
+    "sheet_count": 7,
+    "revision_written": 149,
+    "revision_verified": 150
+  },
+  "status": "Final acceptance synchronized; PRD and 67-feature workbook verified; Android physical-device testing remains unverified",
+  "research_date": "2026-10-14",
+  "verified_date": "2026-10-14",
+  "website": {
+    "home": "http://154.40.47.111:3050/",
+    "account": "http://154.40.47.111:3050/account",
+    "admin": "http://154.40.47.111:3050/admin",
+    "download": "http://154.40.47.111:3050/download",
+    "apk": "http://154.40.47.111:3050/api/apk/download"
+  },
+  "acceptance": {
+    "report": "docs/acceptance-report.md",
+    "core_api_checks": 65,
+    "production_contract_checks": 65,
+    "real_ai_checks": 8,
+    "browser_checks": 34,
+    "apk_release_groups": 7,
+    "service": "xunfu.service",
+    "service_user": "xunfu-app",
+    "database": "xunfu",
+    "database_snapshot_directory": "database/backups",
+    "screenshots": "docs/screenshots"
+  },
+  "limits": [
+    "Android physical-device installation, startup and compatibility not tested",
+    "7 roadmap features not implemented",
+    "Introduction end-to-end verified by backend tests; UI integrated without claiming all actors clicked through in browser",
+    "AI recommendations are text without structured candidate ID post-validation",
+    "Token usage absent from upstream is not zero cost"
+  ]
+}

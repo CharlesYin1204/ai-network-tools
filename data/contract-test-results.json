@@ -1,0 +1,396 @@
+{
+  "testedAt": "2026-10-14T08:39:06.230Z",
+  "base": "http://127.0.0.1:3050",
+  "checks": [
+    {
+      "method": "GET",
+      "path": "apk",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "public/config",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "posts",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "POST",
+      "path": "auth/login",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "admin/settings",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "POST",
+      "path": "auth/login",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "POST",
+      "path": "auth/login",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "POST",
+      "path": "auth/login",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "profile",
+      "status": 400,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "profile",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "POST",
+      "path": "contacts",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "contacts",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "contacts/8",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "POST",
+      "path": "contacts",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "contacts",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "contacts/9",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "profile",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "network",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "network",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "POST",
+      "path": "demands",
+      "status": 201,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "demands",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "demands",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "POST",
+      "path": "matches",
+      "status": 404,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "demands/6",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "demands",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "admin/settings",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "POST",
+      "path": "resources",
+      "status": 201,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "resources/14",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "resources?mine=1",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "resources/14",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "admin/settings",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "resources/14",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "admin/resources/14",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "resources?mine=1",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "admin/resources/14",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "POST",
+      "path": "posts",
+      "status": 201,
+      "success": true
+    },
+    {
+      "method": "POST",
+      "path": "posts/4/like",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "POST",
+      "path": "posts/4/comments",
+      "status": 201,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "posts/4",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "posts/4",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "posts/4/comments",
+      "status": 404,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "posts/4",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "posts/4/comments",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "posts/4",
+      "status": 403,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "admin/posts/4",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "posts/4",
+      "status": 404,
+      "success": true
+    },
+    {
+      "method": "POST",
+      "path": "posts/4/comments",
+      "status": 404,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "posts/4",
+      "status": 403,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "admin/posts/4",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "posts/4",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "posts?mine=1",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "admin/posts",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "POST",
+      "path": "introductions",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "introductions",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "introductions/1",
+      "status": 403,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "introductions/1",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "contacts",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "contacts/10",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "network",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "profile",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "GET",
+      "path": "network",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "admin/settings",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "POST",
+      "path": "ai",
+      "status": 200,
+      "success": true
+    },
+    {
+      "method": "POST",
+      "path": "ai",
+      "status": 429,
+      "success": true
+    },
+    {
+      "method": "PATCH",
+      "path": "admin/settings",
+      "status": 200,
+      "success": true
+    }
+  ]
+}

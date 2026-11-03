@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-10-14T08:41:50.458Z",
+  "results": [
+    {
+      "name": "公开首页12条真实数据库资源",
+      "passed": true
+    },
+    {
+      "name": "分类筛选",
+      "passed": true
+    },
+    {
+      "name": "关键词搜索",
+      "passed": true
+    },
+    {
+      "name": "资源详情",
+      "passed": true
+    },
+    {
+      "name": "公开真实APK下载",
+      "passed": true
+    },
+    {
+      "name": "真实UI登录",
+      "passed": true
+    },
+    {
+      "name": "用户中心全部15项功能和真实统计",
+      "passed": true
+    },
+    {
+      "name": "真实一度和二度关系展示",
+      "passed": true
+    },
+    {
+      "name": "好友私信跳转使用用户ID",
+      "passed": true
+    },
+    {
+      "name": "名片保存不丢城市技能",
+      "passed": true
+    },
+    {
+      "name": "通知已读显示一致",
+      "passed": true
+    },
+    {
+      "name": "机域动态点赞和取消",
+      "passed": true
+    },
+    {
+      "name": "浏览器小赋AI找人真实响应",
+      "passed": true
+    },
+    {
+      "name": "AI历史记录真实回读",
+      "passed": true
+    },
+    {
+      "name": "15个桌面路由可用且无溢出",
+      "passed": true
+    },
+    {
+      "name": "9个移动页面390px无横向溢出，底部菜单可见",
+      "passed": true
+    },
+    {
+      "name": "移动底栏发布入口",
+      "passed": true
+    },
+    {
+      "name": "管理员UI登录",
+      "passed": true
+    },
+    {
+      "name": "11个管理员路由数据加载正常",
+      "passed": true
+    },
+    {
+      "name": "非root生产服务从后台真正构建签名APK",
+      "passed": true
+    },
+    {
+      "name": "所有页面无JavaScript运行时错误",
+      "passed": true
+    }
+  ],
+  "errors": []
+}
