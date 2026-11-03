@@ -41,10 +41,17 @@ if(!(await query('SELECT id FROM demands LIMIT 1')).length)for(const d of [
  [people[2],'需要一位擅长产品故事的摄影师','专业服务','【演示数据】为新产品拍摄 12 张官网使用图片，欢迎沟通拍摄方案。',2500,'杭州']
 ])await query('INSERT INTO demands(user_id,title,category,description,budget,location,demo) VALUES(?,?,?,?,?,?,1)',d);
 if(!(await query('SELECT id FROM contacts LIMIT 1')).length)for(const [a,b] of [[demo,people[0]],[demo,people[1]],[demo,people[5]],[people[0],people[2]],[people[1],people[4]],[people[5],people[3]]])await query("INSERT INTO contacts(requester_id,recipient_id,message,status,starred_by,hidden_by) VALUES(?,?,?,'accepted','[]','[]')",[a,b,'演示人脉关系']);
-if(!(await query('SELECT id FROM messages LIMIT 1')).length){await query('INSERT INTO messages(sender_id,recipient_id,content) VALUES(?,?,?)',[people[0],demo,'你好知夏！看到你的品牌设计资源，想聊聊教育社区项目的合作。此消息为演示数据。']);await query('INSERT INTO notifications(user_id,title,content,link) VALUES(?,?,?,?)',[demo,'欢迎来到询赋','演示账号已准备好资源、需求与人脉。你可以体验发布、收藏、AI 助手和协作流程。','/dashboard']);}
-if(!(await query('SELECT id FROM ai_models LIMIT 1')).length)for(const [name,model,def] of [['GPT 5.6 Luna','gpt-5.6-luna',1],['Claude Opus 5 Thinking','claude-opus-5-thinking',0]])await query('INSERT INTO ai_models(name,base_url,model,api_key,is_default) VALUES(?,?,?,?,?)',[name,process.env.AI_BASE_URL,model,encrypt(process.env.AI_API_KEY),def]);
-const settings={siteName:'询赋',siteTagline:'让每一份价值，都遇见需要的人',siteDescription:'以 AI 连接可信人脉，让闲置资源、专业能力与真实需求相遇。',contactEmail:'hello@example.com',contactPhone:'',demoNotice:'独立产品演示，非询赋官方产品。站内初始用户、人脉与资源均为演示数据，不提供真实交易或支付。',registrationEnabled:true};
-Object.assign(settings,{supportEmail:'hello@example.com',requireReview:true,aiDailyLimit:50,announcement:'欢迎体验询赋独立产品演示，站内初始资料均为演示数据。'});
+if(!(await query('SELECT id FROM messages LIMIT 1')).length){await query('INSERT INTO messages(sender_id,recipient_id,content) VALUES(?,?,?)',[people[0],demo,'你好知夏！看到你的品牌设计资源，想聊聊教育社区项目的合作。此消息为演示数据。']);await query('INSERT INTO notifications(user_id,title,content,link) VALUES(?,?,?,?)',[demo,'欢迎来到AI人脉工具','演示账号已准备好资源、需求与人脉。你可以体验发布、收藏、AI 助手和协作流程。','/dashboard']);}
+if(!(await query('SELECT id FROM ai_models LIMIT 1')).length){
+  const models=[['默认模型',process.env.AI_MODEL,1]];
+  if(process.env.AI_SECONDARY_MODEL)models.push(['备用模型',process.env.AI_SECONDARY_MODEL,0]);
+  for(const [name,model,def] of models){
+    if(!model)throw new Error('Missing AI_MODEL');
+    await query('INSERT INTO ai_models(name,base_url,model,api_key,is_default) VALUES(?,?,?,?,?)',[name,process.env.AI_BASE_URL,model,encrypt(process.env.AI_API_KEY),def]);
+  }
+}
+const settings={siteName:'AI人脉工具',siteTagline:'让每一份价值，都遇见需要的人',siteDescription:'以 AI 连接可信人脉，让闲置资源、专业能力与真实需求相遇。',contactEmail:'hello@example.com',contactPhone:'',demoNotice:'平台提供资源发现与合作连接服务，具体合作条件请双方确认。',registrationEnabled:true};
+Object.assign(settings,{supportEmail:'hello@example.com',requireReview:true,aiDailyLimit:50,announcement:'欢迎使用 AI人脉工具，完善名片并开始连接可信资源。'});
 for(const [k,v]of Object.entries(settings))await query('INSERT IGNORE INTO settings(setting_key,setting_value) VALUES(?,?)',[k,JSON.stringify(v)]);
 for(const [oldName,newName]of Object.entries(categoryAliases))for(const table of ['resources','demands'])await query(`UPDATE ${table} SET category=? WHERE category=?`,[newName,oldName]);
 await writeFile(new URL('../data/seed-summary.json',import.meta.url),JSON.stringify({adminId:admin,demoId:demo,peopleIds:people,seededAt:new Date().toISOString()},null,2));

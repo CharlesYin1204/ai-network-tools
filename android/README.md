@@ -1,4 +1,4 @@
-# 询赋 Android
+# AI人脉工具 Android
 
 轻量 Android WebView 客户端，原生 Java + Android SDK 构建，不需要 Gradle 或远程 Maven 依赖。
 

@@ -1,6 +1,6 @@
-# 询赋 · AI 熟人资源协作平台
+# AI人脉工具 · AI 熟人资源协作平台
 
-询赋是一套面向商务协作和人脉连接场景的数字名片平台，通过资源发布、需求大厅、好友关系、二度人脉引荐、合作跟进和 AI 助手，帮助用户更高效地发现和连接可合作资源。
+AI人脉工具是一套面向商务协作和人脉连接场景的数字名片平台，通过资源发布、需求大厅、好友关系、二度人脉引荐、合作跟进和 AI 助手，帮助用户更高效地发现和连接可合作资源。
 
 ## 核心能力
 
@@ -12,11 +12,11 @@
 
 ## 产品界面
 
-![询赋资源发现首页](docs/screenshots/desktop-home.png)
+![AI人脉工具资源发现首页](docs/screenshots/desktop-home.png)
 
-![询赋 AI 资源助手](docs/screenshots/desktop-ai.png)
+![AI人脉工具 AI 资源助手](docs/screenshots/desktop-ai.png)
 
-![询赋运营管理后台](docs/screenshots/desktop-admin.png)
+![AI人脉工具运营管理后台](docs/screenshots/desktop-admin.png)
 
 ## 技术架构
 

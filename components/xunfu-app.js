@@ -317,7 +317,7 @@ export default function XunfuApp() {
         <Link href="/" className="brand">
           <img src="/icon.svg" alt="" />
           <span>
-            {config.siteName || "询赋"}
+            {config.siteName || "AI人脉工具"}
             <small>让连接产生价值</small>
           </span>
         </Link>
@@ -466,7 +466,7 @@ export default function XunfuApp() {
               </div>
               <Link className="side-item muted" href="/about">
                 <HelpCircle size={18} />
-                关于询赋
+                关于AI人脉工具
               </Link>
               {user?.role === "admin" && (
                 <Link className="side-item muted" href="/admin">
@@ -476,7 +476,7 @@ export default function XunfuApp() {
               )}
             </>
           )}
-          <div className="sidebar-foot">询赋 · 产品体验版</div>
+          <div className="sidebar-foot">AI人脉工具 · 连接可信人脉</div>
         </aside>
         <main className="main-content">
           {!admin && config.announcement && (
@@ -522,9 +522,9 @@ export default function XunfuApp() {
             <Empty title="页面未找到" />
           )}
           <footer className="page-footer">
-            <span>询赋，连接身边的可能。</span>
+            <span>AI人脉工具，连接身边的可能。</span>
             <span>
-              原创面试作品 · 示例内容均为演示数据{" "}
+              AI 人脉与资源协作平台{" "}
               <Link href="/about">了解平台</Link>
             </span>
           </footer>
@@ -610,7 +610,7 @@ function AuthModal({ mode, setMode, onClose, onSuccess }) {
   };
   return (
     <Modal
-      title={mode === "login" ? "欢迎回到询赋" : "开启你的价值连接"}
+      title={mode === "login" ? "欢迎回到AI人脉工具" : "开启你的价值连接"}
       onClose={onClose}
     >
       <p className="modal-intro">连接真实的人，让身边的资源流动起来。</p>
@@ -749,8 +749,8 @@ function ResourceCard({ r, requireUser, notify, reload }) {
           <span className="avatar tiny">
             {(r.ownerName || r.owner_name || "询").slice(0, 1)}
           </span>
-          <span>{r.ownerName || r.owner_name || "询赋成员"}</span>
-          <small>{r.demo ? "演示资源" : "成员发布"}</small>
+          <span>{r.ownerName || r.owner_name || "AI人脉工具成员"}</span>
+          <small>成员发布</small>
           <ArrowUpRight size={16} />
         </div>
       </div>
@@ -1184,8 +1184,7 @@ function Demands(ctx) {
                 <p>{d.description}</p>
                 <div className="demand-bottom">
                   <span>
-                    {d.ownerName || d.owner_name || "询赋成员"}
-                    {d.demo ? " · 演示内容" : ""}
+                    {d.ownerName || d.owner_name || "AI人脉工具成员"}
                   </span>
                   <span>
                     {Number(d.budget) > 0
@@ -1293,7 +1292,7 @@ function ResourceDetail(ctx) {
             <span className="avatar large">
               {(r.ownerName || r.owner_name || "询").slice(0, 1)}
             </span>
-            <h3>{r.ownerName || r.owner_name || "询赋成员"}</h3>
+            <h3>{r.ownerName || r.owner_name || "AI人脉工具成员"}</h3>
             <p>资源发布者</p>
             <div className="detail-price">
               {Number(r.price) > 0 ? (
@@ -2818,7 +2817,7 @@ function DownloadPage(ctx) {
       <div className="download-copy">
         <div className="hero-kicker">
           <Smartphone size={17} />
-          询赋 Android 客户端
+          AI人脉工具 Android 客户端
         </div>
         <h1>
           身边的机会，
@@ -2871,7 +2870,7 @@ function DownloadPage(ctx) {
         </div>
         <div className="phone-brand">
           <img src="/icon.svg" alt="" />
-          询赋 <Sparkles size={17} />
+          AI人脉工具 <Sparkles size={17} />
         </div>
         <div className="phone-hero">
           <h2>
@@ -2934,7 +2933,7 @@ function About(ctx) {
           都有再次发光的可能。
         </h1>
         <p>
-          询赋将 AI 与熟人连接结合，让技能、空间、物品与人脉
+          AI人脉工具将 AI 与熟人连接结合，让技能、空间、物品与人脉
           <br />
           在真实的需求中创造新的价值。
         </p>
@@ -2968,10 +2967,10 @@ function About(ctx) {
         <section className="panel">
           <h2>关于这个作品</h2>
           <p>
-            这是基于询赋官网公开产品介绍设计的原创面试作品，用于展示产品规划、交互设计与工程实现能力。
+            AI人脉工具是一套面向商务协作与熟人资源连接的独立产品，帮助用户更高效地整理资源、发现需求并建立可信连接。
           </p>
           <p>
-            平台中的示例名片、资源与需求均为演示数据，不代表真实商业承诺。平台提供资源信息和合作连接，合作条件由双方进一步确认。
+            平台提供资源信息与合作连接服务，具体合作内容、交付方式和合作条件由双方进一步确认。
           </p>
           <div className="faq-list">
             <h3>常见问题</h3>
@@ -3847,7 +3846,7 @@ function AdminApk(ctx) {
                 <input
                   name="appName"
                   required
-                  defaultValue={config.appName || "询赋"}
+                  defaultValue={config.appName || "AI人脉工具"}
                 />
               </Field>
               <Field label="网站地址">
@@ -3970,7 +3969,7 @@ function AdminApk(ctx) {
                 <tr key={b.id}>
                   <td>
                     <b>
-                      {b.appName || "询赋"} {b.versionName}
+                      {b.appName || "AI人脉工具"} {b.versionName}
                     </b>
                     <small>{b.fileName}</small>
                   </td>
@@ -4044,7 +4043,7 @@ function AdminSettings(ctx) {
     >
       <h3>平台信息与运营配置</h3>
       <Field label="平台名称">
-        <input name="siteName" defaultValue={settings.siteName || "询赋"} />
+        <input name="siteName" defaultValue={settings.siteName || "AI人脉工具"} />
       </Field>
       <Field label="平台介绍">
         <textarea
@@ -4108,7 +4107,7 @@ function InvitePage(ctx) {
       </div>
       <h2>把好连接，分享给你的朋友。</h2>
       <p>
-        邀请朋友加入询赋，完善名片后，通过注册邮箱添加好友。
+        邀请朋友加入AI人脉工具，完善名片后，通过注册邮箱添加好友。
         <br />
         这个链接用于邀请访问，不包含奖励或收益归因。
       </p>

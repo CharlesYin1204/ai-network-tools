@@ -104,7 +104,7 @@ public final class MainActivity extends Activity {
                     String fileName = URLUtil.guessFileName(url, disposition, mimeType);
                     DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
                     request.setTitle(fileName);
-                    request.setDescription("询赋文件下载");
+                    request.setDescription("AI人脉工具文件下载");
                     if (mimeType != null) request.setMimeType(mimeType);
                     request.addRequestHeader("User-Agent", userAgent);
                     if (isSameOrigin(Uri.parse(url))) {

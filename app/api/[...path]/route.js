@@ -54,7 +54,7 @@ async function handler(req, context) {
       if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))fail('请输入有效邮箱');if(password.length<8)fail('密码至少需要 8 位');
       if((await query('SELECT id FROM users WHERE email=?',[email])).length)fail('该邮箱已被注册',409);
       const insert=await query('INSERT INTO users(name,email,password_hash,bio,skills) VALUES(?,?,?,?,?)',[name,email,await bcrypt.hash(password,12),'','[]']);
-      const u=record((await query('SELECT * FROM users WHERE id=?',[insert.insertId]))[0]);await notify(u.id,'欢迎来到询赋','完善名片、发布资源或告诉小赋你的需求，开始连接有价值的人脉。');
+      const u=record((await query('SELECT * FROM users WHERE id=?',[insert.insertId]))[0]);await notify(u.id,'欢迎来到AI人脉工具','完善名片、发布资源或告诉小赋你的需求，开始连接有价值的人脉。');
       const response=result({user:u},201);response.cookies.set('xunfu_session',await token(u),{httpOnly:true,sameSite:'lax',secure:url.protocol==='https:',path:'/',maxAge:7*86400});return response;
     }
     if(route==='auth/logout'&&method==='POST'){const response=result({ok:true});response.cookies.set('xunfu_session','',{httpOnly:true,sameSite:'lax',path:'/',maxAge:0});return response;}

@@ -11,7 +11,7 @@
 - 下载目录：`public/downloads/`；签名及记录目录：`data/android/`。
 - 公开下载入口：`GET /api/apk/download`（最新版），或指定 `?file=构建记录中的文件名`。
 
-初始应用名称为「询赋」，版本 `1.0.0`（versionCode `1`），包名固定 `com.xunfu.app`，站点地址 `http://154.40.47.111:3050`。最低 Android 6.0 / API 23，target SDK 35。APK 是真实签名的 WebView 客户端，网页功能由线上 React 应用提供，APK 不内置服务端。
+初始应用名称为「AI人脉工具」，版本 `1.0.0`（versionCode `1`），包名固定 `com.xunfu.app`，站点地址 `http://154.40.47.111:3050`。最低 Android 6.0 / API 23，target SDK 35。APK 是真实签名的 WebView 客户端，网页功能由线上 React 应用提供，APK 不内置服务端。
 
 ## 已验证结果
 
